@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		584B05E820F506FA006694BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584B05E720F506FA006694BA /* AppDelegate.swift */; };
+		584B05EA20F506FA006694BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584B05E920F506FA006694BA /* Assets.xcassets */; };
+		584B05ED20F506FA006694BA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584B05EB20F506FA006694BA /* MainMenu.xib */; };
+		584B05FD20F50729006694BA /* templateAUfxAudioUnit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 584B05FC20F50729006694BA /* templateAUfxAudioUnit.mm */; };
+		584B05FF20F50729006694BA /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584B05FE20F50729006694BA /* AudioUnitViewController.swift */; };
+		584B060220F50729006694BA /* AudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584B060020F50729006694BA /* AudioUnitViewController.xib */; };
+		584B060820F50729006694BA /* templateAUfx.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 584B05F920F50729006694BA /* templateAUfx.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		584B061120F5098B006694BA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584B061020F5098B006694BA /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		584B060620F50729006694BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 584B05DC20F506FA006694BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 584B05F820F50729006694BA;
+			remoteInfo = templateAUfx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		584B060C20F50729006694BA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				584B060820F50729006694BA /* templateAUfx.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		584B05E420F506FA006694BA /* AudioUnitV3Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioUnitV3Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		584B05E720F506FA006694BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		584B05E920F506FA006694BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		584B05EC20F506FA006694BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		584B05EE20F506FA006694BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		584B05EF20F506FA006694BA /* AudioUnitV3Template.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioUnitV3Template.entitlements; sourceTree = "<group>"; };
+		584B05F920F50729006694BA /* templateAUfx.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = templateAUfx.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		584B05FB20F50729006694BA /* templateAUfxAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = templateAUfxAudioUnit.h; sourceTree = "<group>"; };
+		584B05FC20F50729006694BA /* templateAUfxAudioUnit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = templateAUfxAudioUnit.mm; sourceTree = "<group>"; };
+		584B05FE20F50729006694BA /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
+		584B060120F50729006694BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AudioUnitViewController.xib; sourceTree = "<group>"; };
+		584B060320F50729006694BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		584B060420F50729006694BA /* templateAUfx-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "templateAUfx-Bridging-Header.h"; sourceTree = "<group>"; };
+		584B060520F50729006694BA /* templateAUfx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = templateAUfx.entitlements; sourceTree = "<group>"; };
+		584B060D20F50781006694BA /* DSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DSPKernel.hpp; sourceTree = "<group>"; };
+		584B060E20F5091B006694BA /* BufferedAudioBus.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BufferedAudioBus.hpp; sourceTree = "<group>"; };
+		584B061020F5098B006694BA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		584B061220F50990006694BA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		584B061420F50A13006694BA /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		584B05E120F506FA006694BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584B05F620F50729006694BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584B061120F5098B006694BA /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		584B05DB20F506FA006694BA = {
+			isa = PBXGroup;
+			children = (
+				584B05E620F506FA006694BA /* AudioUnitV3Template */,
+				584B05FA20F50729006694BA /* templateAUfx */,
+				584B05E520F506FA006694BA /* Products */,
+				584B060F20F5098B006694BA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		584B05E520F506FA006694BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				584B05E420F506FA006694BA /* AudioUnitV3Template.app */,
+				584B05F920F50729006694BA /* templateAUfx.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		584B05E620F506FA006694BA /* AudioUnitV3Template */ = {
+			isa = PBXGroup;
+			children = (
+				584B05E720F506FA006694BA /* AppDelegate.swift */,
+				584B05E920F506FA006694BA /* Assets.xcassets */,
+				584B05EB20F506FA006694BA /* MainMenu.xib */,
+				584B05EE20F506FA006694BA /* Info.plist */,
+				584B05EF20F506FA006694BA /* AudioUnitV3Template.entitlements */,
+			);
+			path = AudioUnitV3Template;
+			sourceTree = "<group>";
+		};
+		584B05FA20F50729006694BA /* templateAUfx */ = {
+			isa = PBXGroup;
+			children = (
+				584B05FB20F50729006694BA /* templateAUfxAudioUnit.h */,
+				584B05FC20F50729006694BA /* templateAUfxAudioUnit.mm */,
+				584B060420F50729006694BA /* templateAUfx-Bridging-Header.h */,
+				584B060D20F50781006694BA /* DSPKernel.hpp */,
+				584B060E20F5091B006694BA /* BufferedAudioBus.hpp */,
+				584B05FE20F50729006694BA /* AudioUnitViewController.swift */,
+				584B060020F50729006694BA /* AudioUnitViewController.xib */,
+				584B060320F50729006694BA /* Info.plist */,
+				584B060520F50729006694BA /* templateAUfx.entitlements */,
+			);
+			path = templateAUfx;
+			sourceTree = "<group>";
+		};
+		584B060F20F5098B006694BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				584B061420F50A13006694BA /* AudioUnit.framework */,
+				584B061220F50990006694BA /* AudioToolbox.framework */,
+				584B061020F5098B006694BA /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		584B05E320F506FA006694BA /* AudioUnitV3Template */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 584B05F220F506FA006694BA /* Build configuration list for PBXNativeTarget "AudioUnitV3Template" */;
+			buildPhases = (
+				584B05E020F506FA006694BA /* Sources */,
+				584B05E120F506FA006694BA /* Frameworks */,
+				584B05E220F506FA006694BA /* Resources */,
+				584B060C20F50729006694BA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				584B060720F50729006694BA /* PBXTargetDependency */,
+			);
+			name = AudioUnitV3Template;
+			productName = AudioUnitV3Template;
+			productReference = 584B05E420F506FA006694BA /* AudioUnitV3Template.app */;
+			productType = "com.apple.product-type.application";
+		};
+		584B05F820F50729006694BA /* templateAUfx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 584B060920F50729006694BA /* Build configuration list for PBXNativeTarget "templateAUfx" */;
+			buildPhases = (
+				584B05F520F50729006694BA /* Sources */,
+				584B05F620F50729006694BA /* Frameworks */,
+				584B05F720F50729006694BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = templateAUfx;
+			productName = templateAUfx;
+			productReference = 584B05F920F50729006694BA /* templateAUfx.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		584B05DC20F506FA006694BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = mhamilt7;
+				TargetAttributes = {
+					584B05E320F506FA006694BA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					584B05F820F50729006694BA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 584B05DF20F506FA006694BA /* Build configuration list for PBXProject "AudioUnitV3Template" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 584B05DB20F506FA006694BA;
+			productRefGroup = 584B05E520F506FA006694BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				584B05E320F506FA006694BA /* AudioUnitV3Template */,
+				584B05F820F50729006694BA /* templateAUfx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		584B05E220F506FA006694BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584B05EA20F506FA006694BA /* Assets.xcassets in Resources */,
+				584B05ED20F506FA006694BA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584B05F720F50729006694BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584B060220F50729006694BA /* AudioUnitViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		584B05E020F506FA006694BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584B05E820F506FA006694BA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584B05F520F50729006694BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584B05FD20F50729006694BA /* templateAUfxAudioUnit.mm in Sources */,
+				584B05FF20F50729006694BA /* AudioUnitViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		584B060720F50729006694BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 584B05F820F50729006694BA /* templateAUfx */;
+			targetProxy = 584B060620F50729006694BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		584B05EB20F506FA006694BA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				584B05EC20F506FA006694BA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		584B060020F50729006694BA /* AudioUnitViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				584B060120F50729006694BA /* Base */,
+			);
+			name = AudioUnitViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		584B05F020F506FA006694BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		584B05F120F506FA006694BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		584B05F320F506FA006694BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AudioUnitV3Template/AudioUnitV3Template.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XZ388CS8AV;
+				INFOPLIST_FILE = AudioUnitV3Template/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.AudioUnitV3Template;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		584B05F420F506FA006694BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AudioUnitV3Template/AudioUnitV3Template.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XZ388CS8AV;
+				INFOPLIST_FILE = AudioUnitV3Template/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.AudioUnitV3Template;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		584B060A20F50729006694BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = templateAUfx/templateAUfx.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XZ388CS8AV;
+				INFOPLIST_FILE = templateAUfx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.AudioUnitV3Template.templateAUfx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "templateAUfx/templateAUfx-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		584B060B20F50729006694BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = templateAUfx/templateAUfx.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XZ388CS8AV;
+				INFOPLIST_FILE = templateAUfx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.AudioUnitV3Template.templateAUfx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "templateAUfx/templateAUfx-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		584B05DF20F506FA006694BA /* Build configuration list for PBXProject "AudioUnitV3Template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				584B05F020F506FA006694BA /* Debug */,
+				584B05F120F506FA006694BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		584B05F220F506FA006694BA /* Build configuration list for PBXNativeTarget "AudioUnitV3Template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				584B05F320F506FA006694BA /* Debug */,
+				584B05F420F506FA006694BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		584B060920F50729006694BA /* Build configuration list for PBXNativeTarget "templateAUfx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				584B060A20F50729006694BA /* Debug */,
+				584B060B20F50729006694BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 584B05DC20F506FA006694BA /* Project object */;
+}
