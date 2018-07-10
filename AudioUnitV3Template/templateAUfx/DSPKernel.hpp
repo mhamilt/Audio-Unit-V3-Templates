@@ -56,9 +56,7 @@ public:
         }
     }
     //==============================================================================
-    void processWithEvents(AudioTimeStamp const *timestamp,
-                           AUAudioFrameCount frameCount,
-                           AURenderEvent const *events,
+    void processWithEvents(AUAudioFrameCount frameCount,
                            AudioBufferList* inBufferList,
                            AudioBufferList* outBufferList)
     {
@@ -66,35 +64,10 @@ public:
         inBufferListPtr = inBufferList;
         outBufferListPtr = outBufferList;
         //----------------------------------------------------------------------
-        AUEventSampleTime now = AUEventSampleTime(timestamp->mSampleTime);
         AUAudioFrameCount framesRemaining = frameCount;
-        AURenderEvent const *event = events;
+        AUAudioFrameCount const bufferOffset = frameCount - framesRemaining;
+        process(framesRemaining, bufferOffset);
         //----------------------------------------------------------------------
-        while (framesRemaining > 0)
-        {
-            // If there are no more events, we can process the entire remaining segment and exit.
-            if (event == nullptr)
-            {
-                AUAudioFrameCount const bufferOffset = frameCount - framesRemaining;
-                process(framesRemaining, bufferOffset);
-                return;
-            }
-            
-            // **** start late events late.
-            auto timeZero = AUEventSampleTime(0);
-            auto headEventTime = event->head.eventSampleTime;
-            AUAudioFrameCount const framesThisSegment = AUAudioFrameCount(std::max(timeZero, headEventTime - now));
-            
-            // Compute everything before the next event.
-            if (framesThisSegment > 0)
-            {
-                AUAudioFrameCount const bufferOffset = frameCount - framesRemaining;
-                process(framesThisSegment, bufferOffset);
-                framesRemaining -= framesThisSegment;    // Advance frames.
-                now += AUEventSampleTime(framesThisSegment); // Advance time.
-            }
-            //            performAllSimultaneousEvents(now, event);
-        }
     }
     //==========================================================================
 private:

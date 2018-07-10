@@ -14,7 +14,7 @@
 @interface templateAUfxAudioUnit ()
 @property AUAudioUnitBus *outputBus;
 @property AUAudioUnitBusArray *inputBusArray;
-@property AUAudioUnitBusArray *outputBusArray ;
+@property AUAudioUnitBusArray *outputBusArray;
 @end
 //==============================================================================
 @implementation templateAUfxAudioUnit
@@ -91,6 +91,8 @@
     //--------------------------------------------------------------------------
     _inputBus.allocateRenderResources(self.maximumFramesToRender);
     //--------------------------------------------------------------------------
+    _kernel.init(self.outputBus.format.channelCount, self.outputBus.format.sampleRate);
+    //--------------------------------------------------------------------------
     return YES;
 }
 //==============================================================================
@@ -140,9 +142,7 @@
         }
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         // DSP Goes in process method of DSPKernel
-        state->processWithEvents(timestamp,
-                                 frameCount,
-                                 realtimeEventListHead,
+        state->processWithEvents(frameCount,
                                  inAudioBufferList,
                                  outAudioBufferList);
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

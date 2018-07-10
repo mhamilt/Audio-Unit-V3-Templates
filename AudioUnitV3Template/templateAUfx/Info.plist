@@ -34,9 +34,9 @@
 					<key>factoryFunction</key>
 					<string>$(PRODUCT_MODULE_NAME).AudioUnitViewController</string>
 					<key>manufacturer</key>
-					<string>MHAM</string>
+					<string>MHGH</string>
 					<key>name</key>
-					<string>MHAM: templateAUfx</string>
+					<string>MHGH: templateAUfx</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>
