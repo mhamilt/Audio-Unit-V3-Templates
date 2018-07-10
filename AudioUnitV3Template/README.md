@@ -27,4 +27,4 @@ The code has these 3 main elements
 
 With Objective-C++ (i.e. Objective-C and C++ smooshed together) the core DSP needs to be wrapped in a C++ class, hence DSPKernal. This class can be called and structure however you please. It is hopefully presented in such a way that the inner workings are fairly obvious.
 
-If you want to get straight to majking some cool noises, the sample manipulation takes place in the `process()` function and has a `MARK` placed next to it so you navigate straight to it in Xcode.
+If you want to get straight to majking some cool noises, the sample manipulation takes place in the `process()` function and has a `MARK` placed next to it so you can navigate straight to it in Xcode.
