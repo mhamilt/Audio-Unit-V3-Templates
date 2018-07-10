@@ -8,11 +8,11 @@ When coding an Audio Units using C++ a couple of changes need to made to the tem
 
 - Create Cocoa Project
 - Use Swift as the language
-  - - Don’t use storyboards (no reason just prejudice but you can use them later)
-  - - Don’t select any tests just now, they will clutter things up
+  - Don’t use storyboards (no reason just prejudice but you can use them later)
+  - Don’t select any tests just now, they will clutter things up
 - Add new target
-  - - Select Audio Unit extension
-  - - No tests
+  - Select Audio Unit extension
+  - No tests
 - Rename the audio unit file extension to .mm
 - In the project setup make sure AVFoundation and any other required frameqworks are included in linked libraries
 - Build the audio unit target and make sure it builds without error.
