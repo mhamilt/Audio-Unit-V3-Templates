@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AudioUnitViewController" customModule="templateAUfx" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="c22-O7-iKe" id="hzH-WR-f05"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView autoresizesSubviews="NO" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="540" height="411"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7wW-Yx-pas">
+                    <rect key="frame" x="251" y="197" width="38" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AUv3" id="HUq-VL-0EG">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="7wW-Yx-pas" secondAttribute="bottom" constant="197" id="3aO-Kj-frL"/>
+                <constraint firstItem="7wW-Yx-pas" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="253" id="5E0-qj-KDb"/>
+                <constraint firstItem="7wW-Yx-pas" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="197" id="m7E-CZ-3If"/>
+                <constraint firstAttribute="trailing" secondItem="7wW-Yx-pas" secondAttribute="trailing" constant="253" id="wBo-5o-2EF"/>
+            </constraints>
+            <point key="canvasLocation" x="169" y="232.5"/>
+        </customView>
+    </objects>
+</document>

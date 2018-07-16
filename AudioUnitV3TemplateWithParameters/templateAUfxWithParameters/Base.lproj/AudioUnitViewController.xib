@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AudioUnitViewController" customModule="templateAUfxWithParameters" customModuleProvider="target">
+            <connections>
+                <outlet property="gainSlider" destination="Hi9-py-KrF" id="a0e-FY-9eL"/>
+                <outlet property="view" destination="c22-O7-iKe" id="hzH-WR-f05"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="468" height="365"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hi9-py-KrF">
+                    <rect key="frame" x="39" y="173" width="390" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="386" id="mGN-0p-lg8"/>
+                    </constraints>
+                    <sliderCell key="cell" alignment="left" maxValue="1" doubleValue="0.6208926151761518" tickMarkPosition="above" sliderType="linear" id="19f-Bc-aTv"/>
+                    <connections>
+                        <action selector="handleGainSliderValueChanged:" target="-2" id="K2s-Nu-DDQ"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="97O-Cn-Qbw">
+                    <rect key="frame" x="210" y="198" width="49" height="27"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Gain" id="OV2-Sa-Atk">
+                        <font key="font" metaFont="system" size="22"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Hi9-py-KrF" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="175" id="RHs-J7-r4o"/>
+                <constraint firstItem="97O-Cn-Qbw" firstAttribute="centerX" secondItem="Hi9-py-KrF" secondAttribute="centerX" id="TfG-yj-TXk"/>
+                <constraint firstItem="Hi9-py-KrF" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="41" id="Vd6-eE-FnK"/>
+                <constraint firstAttribute="trailing" secondItem="Hi9-py-KrF" secondAttribute="trailing" constant="41" id="XFR-ad-V35"/>
+                <constraint firstItem="Hi9-py-KrF" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="41" id="ayw-gI-HNZ"/>
+                <constraint firstItem="Hi9-py-KrF" firstAttribute="top" secondItem="97O-Cn-Qbw" secondAttribute="bottom" constant="8" symbolic="YES" id="ePn-kx-0e0"/>
+                <constraint firstAttribute="bottom" secondItem="Hi9-py-KrF" secondAttribute="bottom" constant="175" id="r8s-gs-0G7"/>
+                <constraint firstItem="Hi9-py-KrF" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="175" id="wlo-4V-Bdi"/>
+            </constraints>
+            <point key="canvasLocation" x="-234" y="318.5"/>
+        </customView>
+    </objects>
+</document>
