@@ -21,17 +21,8 @@ in this template
 
 #### templateAUfxWithParametersAudioUnit.mm
 This objective C class is what communicates with the DAW environment. The `initWithComponentDescription` method is where
-the pointers to parameter values are set. `Line 80` is a good place to start, there is a lot of pointers flying around
-which does not help matters.
-
-#### AudioUnitViewController.swift
-This file is where you should head for any GUI work. GUI Elements (or "Views" in Apple parlance) can be added via the AudioUnitViewController.xib
-file. It is highly recommended you start off with a simple Swift based GUI project before delcing into this. There are enough
-headaches to be had in Xcode and Swift without adding in a whole audio processing framework on top.
-#### templateAUfxWithParametersAudioUnit.mm
-This objective C class is what communicates with the DAW environment. The `initWithComponentDescription` method is where
-the pointers to parameter values are set. `Line 80` is a good place to start, there is a lot of pointers flying around
-which does not help matters.
+the pointers to parameter values are set. `Line 80` is a good place to start. There are a lot of pointers flying around
+which does not help in comprehending the logic.
 
 #### AudioUnitViewController.swift
 This file is where you should head for any GUI work. GUI Elements (or "Views" in Apple parlance) can be added via the AudioUnitViewController.xib
