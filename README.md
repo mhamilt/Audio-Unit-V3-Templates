@@ -42,7 +42,9 @@ headaches to be had in Xcode and Swift without adding in a whole audio processin
 Here are a couple of links to check out along your AUv3 travels
 
 http://www.rockhoppertech.com/blog/audio-units-auv3-midi-extension-part-2-c/
+
 http://philjordan.eu/article/mixing-objective-c-c++-and-objective-c++
+
 http://subfurther.com/blog/2017/04/28/brain-dump-v3-audio-units/
 
 # Github Repositories
@@ -50,5 +52,7 @@ http://subfurther.com/blog/2017/04/28/brain-dump-v3-audio-units/
 Here is a selectiong of GitHub Repos that I found useful when making these templates
 
 https://github.com/genedelisa/AUParamsApp
+
 https://github.com/invalidstream/ring-modulator-v3audiounit
+
 https://github.com/FredAntonCorvest/Common-AudioUnit-V3
