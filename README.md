@@ -33,11 +33,8 @@ Sanity check with the `auval` terminal command
 
 ### Audio Unit is not visible after building
 Take a look at the info.plist file, an XML file of info about your Audio Unit
-check:
-	`NSExtension -> NSExtensionAttributes -> AudioComponents -> subtype`
-
-try changing the 4 letter code. Try altering the manufacturer code as well.
-
+Try changing the 4 letter code. Try altering the manufacturer code as well.
+![info.plist](https://github.com/mhamilt/Audio-Unit-V3-Templates/blob/master/images/info.plist.png)
 
 # References
 Here are a couple of links to check out along your AUv3 travels
