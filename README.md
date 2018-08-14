@@ -2,7 +2,7 @@
 A collection of templates for creating Audio Unit V3 in Xcode
 
 ## About
-This repository aims tyo collect together templates for creatnig Audio Unit v3 Plug-ins. 
+This repository aims to collect together templates for creating Audio Unit v3 Plug-ins.
 Apple's API, though powerful, is nebulous at best and for the novice DSP engineer it is a bit much to take on.
 
 Each template listed will gradually include greater and greater complexity. A README can be found in each template folder
@@ -15,8 +15,8 @@ You can ignore everything else for now
 
 
 ## AudioUnitV3TemplateWithParameters
-Exactly as it says, this is a template that includes a GUI slider object and a gain parameter. Adding in more should be a 
-simple case of replicating the process of intiating and single parameter. There are some extra classes to pay attention to 
+Exactly as it says, this is a template that includes a GUI slider object and a gain parameter. Adding in more should be a
+simple case of replicating the process of initiating and single parameter. There are some extra classes to pay attention to
 in this template
 
 #### templateAUfxWithParametersAudioUnit.mm
@@ -25,9 +25,19 @@ the pointers to parameter values are set. `Line 80` is a good place to start. Th
 which does not help in comprehending the logic.
 
 #### AudioUnitViewController.swift
-This file is where you should head for any GUI work. GUI Elements (or "Views" in Apple parlance) can be added via the AudioUnitViewController.xib
-file. It is highly recommended you start off with a simple Swift based GUI project before delcing into this. There are enough
-headaches to be had in Xcode and Swift without adding in a whole audio processing framework on top.
+This file is where you should head for any GUI work. GUI Elements (or "Views" in Apple parlance) can be added via the AudioUnitViewController.xib file. It is highly recommended you start off with a simple Swift based GUI project before delving into this. There are enough headaches to be had in Xcode and Swift without adding in a whole audio processing framework on top.
+
+# Troubleshooting
+Common issues I have come across when building audio units.
+Sanity check with the `auval` terminal command
+
+### Audio Unit is not visible after building
+Take a look at the info.plist file, an XML file of info about your Audio Unit
+check:
+	`NSExtension -> NSExtensionAttributes -> AudioComponents -> subtype`
+
+try changing the 4 letter code. Try altering the manufacturer code as well.
+
 
 # References
 Here are a couple of links to check out along your AUv3 travels
@@ -40,7 +50,7 @@ http://subfurther.com/blog/2017/04/28/brain-dump-v3-audio-units/
 
 # Github Repositories
 
-Here is a selectiong of GitHub Repos that I found useful when making these templates
+Here is a selection of GitHub Repos that I found useful when making these templates
 
 https://github.com/genedelisa/AUParamsApp
 
