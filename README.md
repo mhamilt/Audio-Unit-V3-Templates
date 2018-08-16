@@ -36,6 +36,13 @@ Take a look at the info.plist file, an XML file of info about your Audio Unit
 Try changing the 4 letter code. Try altering the manufacturer code as well.
 ![info.plist](https://github.com/mhamilt/Audio-Unit-V3-Templates/blob/master/images/info.plist.png)
 
+
+### How do I install once I have built the AUv3?
+The AUv3 is an app extension that is part of a larger application. Along with the `.appex` files you should have a `.app` file. Open that on the machine you wish to install and it should register the AUv3.
+
+#### Is there a nicer way to install it?
+I am currently looking into cleaner package delivery. Watch this space.
+
 # References
 Here are a couple of links to check out along your AUv3 travels
 
