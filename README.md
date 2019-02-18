@@ -31,11 +31,27 @@ This file is where you should head for any GUI work. GUI Elements (or "Views" in
 Common issues I have come across when building audio units.
 Sanity check with the `auval` terminal command
 
+
 ### Audio Unit is not visible after building
 Take a look at the info.plist file, an XML file of info about your Audio Unit
 Try changing the 4 letter code. Try altering the manufacturer code as well.
+
 ![info.plist](https://github.com/mhamilt/Audio-Unit-V3-Templates/blob/master/images/info.plist.png)
 
+### Build Errors
+
+- `'vector' file not found`
+- `""_OBJC_CLASS_$_AVAudioFormat", referenced from:"`
+- `"_OBJC_CLASS_$_AVAudioPCMBuffer", referenced from:`
+- `linker command failed with exit code 1 (use -v to see invocation)`
+
+Any of the above? Sounds like you have forgotten to link a library, most probably AVFoundation.
+
+![LinkLibrary](https://github.com/mhamilt/Audio-Unit-V3-Templates/blob/master/images/BuildPhaseSetup.png)
+
+or your AudioUnit ObjectiveC++ file has the wrong extension. Change it to `.mm`
+
+![ObjectiveC++ naming](https://github.com/mhamilt/Audio-Unit-V3-Templates/blob/master/images/ObjectiveC++FileNaming.png)
 
 ### How do I install once I have built the AUv3?
 The AUv3 is an app extension that is part of a larger application. Along with the `.appex` files you should have a `.app` file. Open that on the machine you wish to install and it should register the AUv3.
