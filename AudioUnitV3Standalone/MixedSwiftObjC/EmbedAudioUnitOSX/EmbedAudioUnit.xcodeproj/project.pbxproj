@@ -89,7 +89,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5802A83A221C5F67001AD26E /* ImbedAudioUnit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImbedAudioUnit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5802A83A221C5F67001AD26E /* EmbedAudioUnit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmbedAudioUnit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5802A83D221C5F67001AD26E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5802A83F221C5F67001AD26E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5802A841221C5F67001AD26E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		5802A87E221C5FBF001AD26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5802A87F221C5FBF001AD26E /* FilterDemoAppExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FilterDemoAppExtension-Bridging-Header.h"; sourceTree = "<group>"; };
 		5802A880221C5FBF001AD26E /* FilterDemoAppExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FilterDemoAppExtension.entitlements; sourceTree = "<group>"; };
-		5802A888221C6031001AD26E /* ImbedAudioUnit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImbedAudioUnit-Bridging-Header.h"; sourceTree = "<group>"; };
+		5802A888221C6031001AD26E /* EmbedAudioUnit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmbedAudioUnit-Bridging-Header.h"; sourceTree = "<group>"; };
 		5802A889221C6032001AD26E /* NSView+BridgeInit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+BridgeInit.h"; sourceTree = "<group>"; };
 		5802A88A221C6079001AD26E /* FilterDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterDemoViewController.h; sourceTree = "<group>"; };
 		5802A88C221C60B1001AD26E /* FilterDemoViewController_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterDemoViewController_Internal.h; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		5802A831221C5F67001AD26E = {
 			isa = PBXGroup;
 			children = (
-				5802A83C221C5F67001AD26E /* ImbedAudioUnit */,
+				5802A83C221C5F67001AD26E /* EmbedAudioUnit */,
 				5802A853221C5F80001AD26E /* FilterDemoFramework */,
 				5802A875221C5FBF001AD26E /* FilterDemoAppExtension */,
 				5802A83B221C5F67001AD26E /* Products */,
@@ -173,17 +173,17 @@
 		5802A83B221C5F67001AD26E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5802A83A221C5F67001AD26E /* ImbedAudioUnit.app */,
+				5802A83A221C5F67001AD26E /* EmbedAudioUnit.app */,
 				5802A852221C5F80001AD26E /* FilterDemoFramework.framework */,
 				5802A874221C5FBF001AD26E /* FilterDemoAppExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5802A83C221C5F67001AD26E /* ImbedAudioUnit */ = {
+		5802A83C221C5F67001AD26E /* EmbedAudioUnit */ = {
 			isa = PBXGroup;
 			children = (
-				5819B0CF22254CB8006A8D57 /* ImbededFiles */,
+				5819B0CF22254CB8006A8D57 /* EmbeddedFiles */,
 				5802A83D221C5F67001AD26E /* AppDelegate.swift */,
 				5819B0CB222549C5006A8D57 /* SimplePlayEngine.swift */,
 				5802A83F221C5F67001AD26E /* ViewController.swift */,
@@ -192,9 +192,9 @@
 				5802A846221C5F67001AD26E /* Info.plist */,
 				5802A847221C5F67001AD26E /* ImbedAudioUnit.entitlements */,
 				5802A889221C6032001AD26E /* NSView+BridgeInit.h */,
-				5802A888221C6031001AD26E /* ImbedAudioUnit-Bridging-Header.h */,
+				5802A888221C6031001AD26E /* EmbedAudioUnit-Bridging-Header.h */,
 			);
-			path = ImbedAudioUnit;
+			path = EmbedAudioUnit;
 			sourceTree = "<group>";
 		};
 		5802A853221C5F80001AD26E /* FilterDemoFramework */ = {
@@ -241,12 +241,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5819B0CF22254CB8006A8D57 /* ImbededFiles */ = {
+		5819B0CF22254CB8006A8D57 /* EmbeddedFiles */ = {
 			isa = PBXGroup;
 			children = (
 				5819B0CD22254CB1006A8D57 /* drumLoop.caf */,
 			);
-			path = ImbededFiles;
+			path = EmbeddedFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +270,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5802A839221C5F67001AD26E /* ImbedAudioUnit */ = {
+		5802A839221C5F67001AD26E /* EmbedAudioUnit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5802A84A221C5F67001AD26E /* Build configuration list for PBXNativeTarget "ImbedAudioUnit" */;
+			buildConfigurationList = 5802A84A221C5F67001AD26E /* Build configuration list for PBXNativeTarget "EmbedAudioUnit" */;
 			buildPhases = (
 				5802A836221C5F67001AD26E /* Sources */,
 				5802A837221C5F67001AD26E /* Frameworks */,
@@ -286,9 +286,9 @@
 				5802A858221C5F80001AD26E /* PBXTargetDependency */,
 				5802A882221C5FBF001AD26E /* PBXTargetDependency */,
 			);
-			name = ImbedAudioUnit;
+			name = EmbedAudioUnit;
 			productName = ImbedAudioUnit;
-			productReference = 5802A83A221C5F67001AD26E /* ImbedAudioUnit.app */;
+			productReference = 5802A83A221C5F67001AD26E /* EmbedAudioUnit.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5802A851221C5F80001AD26E /* FilterDemoFramework */ = {
@@ -357,7 +357,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5802A835221C5F67001AD26E /* Build configuration list for PBXProject "ImbedAudioUnit" */;
+			buildConfigurationList = 5802A835221C5F67001AD26E /* Build configuration list for PBXProject "EmbedAudioUnit" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -370,7 +370,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5802A839221C5F67001AD26E /* ImbedAudioUnit */,
+				5802A839221C5F67001AD26E /* EmbedAudioUnit */,
 				5802A851221C5F80001AD26E /* FilterDemoFramework */,
 				5802A873221C5FBF001AD26E /* FilterDemoAppExtension */,
 			);
@@ -582,11 +582,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XZ388CS8AV;
-				INFOPLIST_FILE = ImbedAudioUnit/Info.plist;
+				INFOPLIST_FILE = EmbedAudioUnit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.ImbedAudioUnit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.EmbedAudioUnit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ImbedAudioUnit/ImbedAudioUnit-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "EmbedAudioUnit/EmbedAudioUnit-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -600,11 +600,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XZ388CS8AV;
-				INFOPLIST_FILE = ImbedAudioUnit/Info.plist;
+				INFOPLIST_FILE = EmbedAudioUnit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.ImbedAudioUnit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.EmbedAudioUnit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ImbedAudioUnit/ImbedAudioUnit-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "EmbedAudioUnit/EmbedAudioUnit-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -667,7 +667,7 @@
 				DEVELOPMENT_TEAM = XZ388CS8AV;
 				INFOPLIST_FILE = FilterDemoAppExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.ImbedAudioUnit.FilterDemoAppExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.EmbedAudioUnit.FilterDemoAppExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "FilterDemoAppExtension/FilterDemoAppExtension-Bridging-Header.h";
@@ -683,7 +683,7 @@
 				DEVELOPMENT_TEAM = XZ388CS8AV;
 				INFOPLIST_FILE = FilterDemoAppExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.ImbedAudioUnit.FilterDemoAppExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhamilt7.EmbedAudioUnit.FilterDemoAppExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "FilterDemoAppExtension/FilterDemoAppExtension-Bridging-Header.h";
@@ -694,7 +694,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5802A835221C5F67001AD26E /* Build configuration list for PBXProject "ImbedAudioUnit" */ = {
+		5802A835221C5F67001AD26E /* Build configuration list for PBXProject "EmbedAudioUnit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5802A848221C5F67001AD26E /* Debug */,
@@ -703,7 +703,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5802A84A221C5F67001AD26E /* Build configuration list for PBXNativeTarget "ImbedAudioUnit" */ = {
+		5802A84A221C5F67001AD26E /* Build configuration list for PBXNativeTarget "EmbedAudioUnit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5802A84B221C5F67001AD26E /* Debug */,
