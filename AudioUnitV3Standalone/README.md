@@ -4,11 +4,13 @@ Examples of embedding AUV3s in an app
 ---
 
 ## Contents
+* [Structure](#structure)
 * [Swift-ifying](#swift-ifying)
+  * [Mixed Swift and Objective C](#mixedswiftobjc)
 
 ---
 
-### Structure
+## Structure
 
 For each example, the structure is the same. For embedding the Audio Unit, a framework target is created that contains that the contents of the main Audio DSP as well as the Nib for the plug-in view. The app extension creates the audio unit factory and registers an audio unit with the given component description, see `FilterDemoViewController+AUAudioUnitFactory.m` line 15.
 
@@ -36,5 +38,7 @@ To ensure that everything compiles and Swift will see the Objective-C based fram
 ![Bridge](images/bridge-header.png)
 
 All that should need to be changed are the FilterDSPFile contents and the Nib to match your parameters.
+
+This is a very stripped back version of the Apple Example in order to de-mystify what is going on. Look at `SimplePlayEngine.swift` and the function `selectAudioUnitWithComponentDescription` for loading the audio unit. Actual loading of Audio unit take place starting line 479.
 
 ---
