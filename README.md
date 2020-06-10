@@ -22,7 +22,7 @@ A collection of templates for creating Audio Unit V3 in Xcode
 ## About
 
 This repository aims to collect together templates for creating Audio Unit v3 Plug-ins.
-Apple's API, though powerful, is nebulous at best and for the novice DSP engineer it is a bit much to take on.
+[Apple's API](https://developer.apple.com/library/archive/documentation/MusicAudio/Conceptual/AudioUnitProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40003278), though powerful, is [nebulous](https://developer.apple.com/documentation/audiotoolbox/incorporating_audio_effects_and_instruments) at best and for the novice DSP engineer it is a bit much to take on. [Apple's sample code](https://developer.apple.com/library/archive/samplecode/sc2195/Introduction/Intro.html#//apple_ref/doc/uid/DTS40013969) and [tutorial](https://developer.apple.com/documentation/audiotoolbox/creating_custom_audio_effects#//apple_ref/doc/uid/TP40016185) left me wanting, so here are a couple of complete Xcode projects to help you get started.
 
 Each template listed will gradually include greater and greater complexity. A `README` can be found in each template folder
 but here is a rough guide to get you started.
