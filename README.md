@@ -1,38 +1,67 @@
 # Audio-Unit-V3-Templates
+
 A collection of templates for creating Audio Unit V3 in Xcode
 
+- [Audio-Unit-V3-Templates](#audio-unit-v3-templates)
+  - [About](#about)
+  - [Contributing](#contributing)
+  - [Templates](#templates)
+    - [AudioUnit V3 Template Basic](#audiounit-v3-template-basic)
+    - [AudioUnitV3TemplateWithParameters](#audiounitv3templatewithparameters)
+      - [templateAUfxWithParametersAudioUnit.mm](#templateaufxwithparametersaudiounitmm)
+      - [AudioUnitViewController.swift](#audiounitviewcontrollerswift)
+  - [Troubleshooting](#troubleshooting)
+    - [Audio Unit is not visible after building](#audio-unit-is-not-visible-after-building)
+    - [Build Errors](#build-errors)
+    - [How do I install once I have built the AUv3?](#how-do-i-install-once-i-have-built-the-auv3)
+      - [Is there a nicer way to install it?](#is-there-a-nicer-way-to-install-it)
+  - [Links](#links)
+    - [References](#references)
+    - [Github Repositories](#github-repositories)
+
 ## About
+
 This repository aims to collect together templates for creating Audio Unit v3 Plug-ins.
 Apple's API, though powerful, is nebulous at best and for the novice DSP engineer it is a bit much to take on.
 
-Each template listed will gradually include greater and greater complexity. A README can be found in each template folder
+Each template listed will gradually include greater and greater complexity. A `README` can be found in each template folder
 but here is a rough guide to get you started.
 
-## AudioUnit V3 Template Basic
+## Contributing
+
+[See Contributing documentation](./CONTRIBUTING.md)
+
+## Templates
+
+### AudioUnit V3 Template Basic
+
 A bare bones template: Audio comes in, Audio Goes out. The DSP kernel is where you will want to focus your attention.
 The process method of the DSPKernel class is where the sample by sample processing takes place `(DSPKernel.hpp line 54)`.
 You can ignore everything else for now
 
+### AudioUnitV3TemplateWithParameters
 
-## AudioUnitV3TemplateWithParameters
 Exactly as it says, this is a template that includes a GUI slider object and a gain parameter. Adding in more should be a
 simple case of replicating the process of initiating and single parameter. There are some extra classes to pay attention to
 in this template
 
-#### templateAUfxWithParametersAudioUnit.mm
+##### templateAUfxWithParametersAudioUnit.mm
+
 This objective C class is what communicates with the DAW environment. The `initWithComponentDescription` method is where
 the pointers to parameter values are set. `Line 80` is a good place to start. There are a lot of pointers flying around
 which does not help in comprehending the logic.
 
-#### AudioUnitViewController.swift
+##### AudioUnitViewController.swift
+
 This file is where you should head for any GUI work. GUI Elements (or "Views" in Apple parlance) can be added via the AudioUnitViewController.xib file. It is highly recommended you start off with a simple Swift based GUI project before delving into this. There are enough headaches to be had in Xcode and Swift without adding in a whole audio processing framework on top.
 
-# Troubleshooting
+## Troubleshooting
+
 Common issues I have come across when building audio units.
 Sanity check with the `auval` terminal command
 
-
 ### Audio Unit is not visible after building
+
 Take a look at the info.plist file, an XML file of info about your Audio Unit
 Try changing the 4 letter code. Try altering the manufacturer code as well.
 
@@ -54,26 +83,31 @@ or your AudioUnit ObjectiveC++ file has the wrong extension. Change it to `.mm`
 ![ObjectiveC++ naming](https://github.com/mhamilt/Audio-Unit-V3-Templates/blob/master/images/ObjectiveC++FileNaming.png)
 
 ### How do I install once I have built the AUv3?
+
 The AUv3 is an app extension that is part of a larger application. Along with the `.appex` files you should have a `.app` file. Open that on the machine you wish to install and it should register the AUv3.
 
 #### Is there a nicer way to install it?
+
 I am currently looking into cleaner package delivery. Watch this space.
 
-# References
+## Links
+
+### References
+
 Here are a couple of links to check out along your AUv3 travels
 
-http://www.rockhoppertech.com/blog/audio-units-auv3-midi-extension-part-2-c/
+- [Audio Units (AUv3) MIDI extension – Part 2: C++](http://www.rockhoppertech.com/blog/audio-units-auv3-midi-extension-part-2-c/)
+- [Mixing Objective-C, C++ and Objective-C++: an Updated Summary](http://philjordan.eu/article/mixing-objective-c-c++-and-objective-c++)
+- [Brain Dump: v3 Audio Units](http://subfurther.com/blog/2017/04/28/brain-dump-v3-audio-units/)
 
-http://philjordan.eu/article/mixing-objective-c-c++-and-objective-c++
+Suggestions are welcome for other helpful articles.
 
-http://subfurther.com/blog/2017/04/28/brain-dump-v3-audio-units/
+### Github Repositories
 
-# Github Repositories
+Here is a selection of GitHub Repos that I found useful when making these templates.
 
-Here is a selection of GitHub Repos that I found useful when making these templates
+- [genedelisa/AUParamsApp](https://github.com/genedelisa/AUParamsApp)
+- [ring-modulator-v3audiounit](https://github.com/invalidstream/ring-modulator-v3audiounit)
+- [FredAntonCorvest/Common-AudioUnit-V3](https://github.com/FredAntonCorvest/Common-AudioUnit-V3)
 
-https://github.com/genedelisa/AUParamsApp
-
-https://github.com/invalidstream/ring-modulator-v3audiounit
-
-https://github.com/FredAntonCorvest/Common-AudioUnit-V3
+You can also search GitHub by tag, so have a look at [#auv3](https://github.com/topics/auv3), [#audio-units](https://github.com/topics/audio-units), [#audio-unit](https://github.com/topics/audio-unit), [#audiounit](https://github.com/topics/audiounit) for more examples.
