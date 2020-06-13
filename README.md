@@ -27,6 +27,17 @@ This repository aims to collect together templates for creating Audio Unit v3 Pl
 Each template listed will gradually include greater and greater complexity. A `README` can be found in each template folder
 but here is a rough guide to get you started.
 
+### Apple Sample Code
+
+To save time traipsing around the [Apple Sample Code Archive](https://developer.apple.com/library/archive/navigation/), here are the links too available sample code for AUv2 and AUv3 code.
+
+- [Creating Custom Audio Effects](https://developer.apple.com/documentation/audiotoolbox/creating_custom_audio_effects?language=objc): AUv3 and macOS 10.15 only. An entirely swift approach.
+
+- [AurioTouch](https://developer.apple.com/library/archive/samplecode/aurioTouch/Introduction/Intro.html#//apple_ref/doc/uid/DTS40007770)
+- [Audio Unit Examples (AudioUnit Effect, Generator, Instrument, MIDI Processor and Offline)](https://developer.apple.com/library/archive/samplecode/sc2195/Introduction/Intro.html#//apple_ref/doc/uid/DTS40013969)
+- [MatrixMixerTest](https://developer.apple.com/library/archive/samplecode/MatrixMixerTest/Introduction/Intro.html#//apple_ref/doc/uid/DTS40008645)
+- [Inter-App Audio Examples](https://developer.apple.com/library/archive/samplecode/InterAppAudioSuite/Introduction/Intro.html#//apple_ref/doc/uid/DTS40013418)
+
 ## Contributing
 
 [See Contributing documentation](./CONTRIBUTING.md)
