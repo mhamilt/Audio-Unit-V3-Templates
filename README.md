@@ -4,17 +4,19 @@ A collection of templates for creating Audio Unit V3 in Xcode
 
 - [Audio-Unit-V3-Templates](#audio-unit-v3-templates)
   - [About](#about)
+    - [Apple Sample Code](#apple-sample-code)
   - [Contributing](#contributing)
   - [Templates](#templates)
     - [AudioUnit V3 Template Basic](#audiounit-v3-template-basic)
     - [AudioUnitV3TemplateWithParameters](#audiounitv3templatewithparameters)
-      - [templateAUfxWithParametersAudioUnit.mm](#templateaufxwithparametersaudiounitmm)
-      - [AudioUnitViewController.swift](#audiounitviewcontrollerswift)
+        - [templateAUfxWithParametersAudioUnit.mm](#templateaufxwithparametersaudiounitmm)
+        - [AudioUnitViewController.swift](#audiounitviewcontrollerswift)
   - [Troubleshooting](#troubleshooting)
     - [Audio Unit is not visible after building](#audio-unit-is-not-visible-after-building)
     - [Build Errors](#build-errors)
     - [How do I install once I have built the AUv3?](#how-do-i-install-once-i-have-built-the-auv3)
       - [Is there a nicer way to install it?](#is-there-a-nicer-way-to-install-it)
+      - [What can I do with my `appex` file?](#what-can-i-do-with-my-appex-file)
   - [Links](#links)
     - [References](#references)
     - [Github Repositories](#github-repositories)
@@ -95,11 +97,24 @@ or your AudioUnit ObjectiveC++ file has the wrong extension. Change it to `.mm`
 
 ### How do I install once I have built the AUv3?
 
-The AUv3 is an app extension that is part of a larger application. Along with the `.appex` files you should have a `.app` file. Open that on the machine you wish to install and it should register the AUv3.
+AUv3s are a part of the PluginKit Eco system and information about it is [pretty thin on the ground](https://developer.apple.com/search/?q=pluginkit&type=Documentation). Basically you will need to run your `.app` with the embedded `.appex` _before_ it is registered by PluginKit. You can check your app is registered by
+
+- Running `auval -a` in Terminal and looking for your plugin. `auval -a | grep FOUR_CHARACTER_MANU_CODE` can also help for big lists
+- Running `pluginkit -m` in Terminal and looking for your `.appex`'s bundle identifier
 
 #### Is there a nicer way to install it?
 
-I am currently looking into cleaner package delivery. Watch this space.
+Not really, run the `.app` and your done. PluginKit applies to any embedded `.appex` so this method of installation makes sense for those, but is perhaps a little unusual to what audio plug-in users expect.
+
+#### What can I do with my `appex` file?
+
+Not much, your app needs _something_ to embed in the first place. You can always import it into another xcode project. By itself, the appex is useless and you need to embed it in an app.
+
+### Building AUv3s with JUCE
+
+Using JUCE to make an AUv3? [See my post on Troubleshooting AUv3s on the Juce forums](https://forum.juce.com/t/help-my-audio-unit-version-3-auv3-is-not-working/45860).
+
+***
 
 ## Links
 
